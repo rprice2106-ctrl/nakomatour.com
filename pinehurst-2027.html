@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pinehurst 2027 | Nakoma Tour</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f4f1;
+            color: #1f2a24;
+        }
+
+        /* HEADER */
+        header {
+            background-image:
+                linear-gradient(rgba(0,0,0,0.40), rgba(0,0,0,0.40)),
+                url('pinehurst.jpeg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 130px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 58px;
+            letter-spacing: 3px;
+            font-weight: 800;
+        }
+
+        header p {
+            margin: 15px 0 0;
+            font-size: 22px;
+            letter-spacing: 1px;
+        }
+
+        /* MAIN */
+        main {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        /* SECTIONS */
+        .section {
+            background: white;
+            border-radius: 14px;
+            padding: 35px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .section h2 {
+            margin-top: 0;
+            font-size: 30px;
+            border-bottom: 2px solid #e1e2de;
+            padding-bottom: 12px;
+        }
+
+        /* ROSTER */
+        .roster {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        .player {
+            background: #f0f1ed;
+            padding: 14px;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        /* ITINERARY */
+        .event {
+            padding: 20px 0;
+            border-bottom: 1px solid #e1e2de;
+        }
+
+        .event:last-child {
+            border-bottom: none;
+        }
+
+        .date {
+            font-size: 19px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .details {
+            font-size: 17px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        /* BACK BUTTON */
+        .back {
+            display: inline-block;
+            margin-top: 5px;
+            color: #1f2a24;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back:hover {
+            text-decoration: underline;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #777;
+            font-size: 14px;
+        }
+
+        /* MOBILE */
+        @media (max-width: 700px) {
+
+            header {
+                padding: 90px 20px;
+            }
+
+            header h1 {
+                font-size: 42px;
+            }
+
+            header p {
+                font-size: 18px;
+            }
+
+            .section {
+                padding: 25px;
+            }
+
+            .roster {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 450px) {
+
+            .roster {
+                grid-template-columns: 1fr;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+        <h1>PINEHURST 2027</h1>
+        <p>September 29 – October 3, 2027</p>
+    </header>
+
+
+    <main>
+
+        <!-- ROSTER -->
+
+        <section class="section">
+
+            <h2>Roster</h2>
+
+            <div class="roster">
+
+                <div class="player">Ben Filkouski</div>
+                <div class="player">Austin Resop</div>
+                <div class="player">Catul Kiti</div>
+                <div class="player">Ethan Miller</div>
+                <div class="player">Landon Vinger</div>
+                <div class="player">Alex Yde</div>
+                <div class="player">Ryan Larson</div>
+                <div class="player">Pete Daniels</div>
+                <div class="player">Alex Filkouski</div>
+                <div class="player">Mike Doers</div>
+                <div class="player">Mike Poplawski</div>
+                <div class="player">Bo Sutton</div>
+                <div class="player">Chris Jones</div>
+                <div class="player">John D'Orazio</div>
+                <div class="player">Tucker Smith</div>
+                <div class="player">Tyler Wedel</div>
+                <div class="player">Bobby Price</div>
+                <div class="player">James West</div>
+                <div class="player">Drew Dretske</div>
+                <div class="player">Mickey Defilippo</div>
+                <div class="player">Nate Gorman</div>
+                <div class="player">Andrew Buss</div>
+                <div class="player">Tom Ray</div>
+                <div class="player">Alex Wodarcyzk</div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ITINERARY -->
+
+        <section class="section">
+
+            <h2>Schedule of Events</h2>
+
+
+            <div class="event">
+
+                <div class="date">
+                    Wednesday, September 29
+                </div>
+
+                <div class="details">
+                    Arrive and play Tobacco Road.<br>
+                    <strong>Lodging needed for the evening.</strong>
+                </div>
+
+            </div>
+
+
+            <div class="event">
+
+                <div class="date">
+                    Thursday, September 30
+                </div>
+
+                <div class="details">
+                    18 Holes at Pinehurst
+                    <br>
+                    Courses: #2, #4, #8 & #10
+                </div>
+
+            </div>
+
+
+            <div class="event">
+
+                <div class="date">
+                    Friday, October 1
+                </div>
+
+                <div class="details">
+                    18 Holes at Pinehurst + The Cradle
+                    <br>
+                    Courses: #2, #4, #8 & #10
+                </div>
+
+            </div>
+
+
+            <div class="event">
+
+                <div class="date">
+                    Saturday, October 2
+                </div>
+
+                <div class="details">
+                    18 Holes at Pinehurst
+                    <br>
+                    Courses: #2, #4, #8 & #10
+                </div>
+
+            </div>
+
+
+            <div class="event">
+
+                <div class="date">
+                    Sunday, October 3
+                </div>
+
+                <div class="details">
+                    18 Holes at Pinehurst
+                    <br>
+                    Courses: #2, #4, #8 & #10
+                    <br><br>
+                    <strong>Depart</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- BACK -->
+
+        <a class="back" href="nakoma-tour.html">
+            ← Back to Nakoma Tour
+        </a>
+
+    </main>
+
+
+    <footer>
+        Nakoma Tour © 2026
+    </footer>
+
+</body>
+</html>
