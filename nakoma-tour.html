@@ -1,13 +1,180 @@
-nakomatour.com
-│
-├── index.html              ← Main homepage
-├── commons.jpeg
-│
-├── nakoma-tour.html        ← Nakoma Tour
-│
-├── pinehurst-2027.html     ← Upcoming Tour
-│
-├── sand-valley-2024.html   ← 2024 History
-├── sand-valley-2026.html   ← 2026 History
-│
-└── bdo.html                ← BDO
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nakoma Tour</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f4f1;
+            color: #1f2a24;
+        }
+
+        header {
+            background-image:
+                linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+                url('commons.jpeg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 52px;
+            letter-spacing: 4px;
+        }
+
+        header p {
+            margin-top: 15px;
+            font-size: 20px;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .box {
+            background: white;
+            border-radius: 14px;
+            padding: 35px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .box h2 {
+            margin-top: 0;
+            font-size: 30px;
+        }
+
+        .box p {
+            font-size: 17px;
+            line-height: 1.6;
+        }
+
+        .links {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+
+        .link {
+            display: block;
+            flex: 1;
+            min-width: 250px;
+            background: #1f2a24;
+            color: white;
+            text-decoration: none;
+            padding: 22px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 19px;
+            font-weight: bold;
+        }
+
+        .link:hover {
+            opacity: 0.85;
+        }
+
+        .back {
+            display: inline-block;
+            margin-top: 10px;
+            color: #1f2a24;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: #777;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                padding: 80px 20px;
+            }
+
+            header h1 {
+                font-size: 40px;
+            }
+
+            .box {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>NAKOMA TOUR</h1>
+        <p>Annual Golf. Good Friends. Great Courses.</p>
+    </header>
+
+    <main>
+
+        <!-- UPCOMING TOUR -->
+        <section class="box">
+            <h2>Upcoming Tour</h2>
+
+            <p>
+                Get the details for the next Nakoma Tour,
+                including courses, schedule, travel information,
+                and everything you need to know for the trip.
+            </p>
+
+            <div class="links">
+                <a class="link" href="pinehurst-2027.html">
+                    Pinehurst 2027
+                </a>
+            </div>
+        </section>
+
+
+        <!-- TOUR HISTORY -->
+        <section class="box">
+            <h2>Tour History</h2>
+
+            <p>
+                Look back at previous Nakoma Tour trips,
+                including results, courses, and tournament history.
+            </p>
+
+            <div class="links">
+                <a class="link" href="sand-valley-2024.html">
+                    2024 Sand Valley Results
+                </a>
+
+                <a class="link" href="sand-valley-2026.html">
+                    2026 Sand Valley Results
+                </a>
+            </div>
+        </section>
+
+        <a class="back" href="index.html">
+            ← Back to Nakoma Tour Home
+        </a>
+
+    </main>
+
+    <footer>
+        Nakoma Tour © 2026
+    </footer>
+
+</body>
+</html>
