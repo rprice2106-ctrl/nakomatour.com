@@ -32,65 +32,43 @@
             margin: 0;
             font-size: 52px;
             letter-spacing: 4px;
-        }
-
-        header p {
-            margin-top: 15px;
-            font-size: 20px;
+            font-weight: 800;
         }
 
         main {
-            max-width: 900px;
+            max-width: 800px;
             margin: 50px auto;
             padding: 0 20px;
         }
 
-        .box {
+        .button-box {
             background: white;
             border-radius: 14px;
-            padding: 35px;
+            padding: 40px;
             margin-bottom: 30px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            text-align: center;
         }
 
-        .box h2 {
-            margin-top: 0;
-            font-size: 30px;
-        }
-
-        .box p {
-            font-size: 17px;
-            line-height: 1.6;
-        }
-
-        .links {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-            margin-top: 25px;
-        }
-
-        .link {
+        .button {
             display: block;
-            flex: 1;
-            min-width: 250px;
             background: #1f2a24;
             color: white;
             text-decoration: none;
-            padding: 22px;
+            padding: 25px;
             border-radius: 10px;
-            text-align: center;
-            font-size: 19px;
+            font-size: 24px;
             font-weight: bold;
         }
 
-        .link:hover {
+        .button:hover {
             opacity: 0.85;
         }
 
         .back {
-            display: inline-block;
-            margin-top: 10px;
+            display: block;
+            text-align: center;
+            margin-top: 35px;
             color: #1f2a24;
             text-decoration: none;
             font-weight: bold;
@@ -98,7 +76,7 @@
 
         footer {
             text-align: center;
-            padding: 30px 20px;
+            padding: 40px 20px;
             color: #777;
             font-size: 14px;
         }
@@ -112,8 +90,12 @@
                 font-size: 40px;
             }
 
-            .box {
+            .button-box {
                 padding: 25px;
+            }
+
+            .button {
+                font-size: 20px;
             }
         }
     </style>
@@ -123,51 +105,28 @@
 
     <header>
         <h1>NAKOMA TOUR</h1>
-        <p>Annual Golf. Good Friends. Great Courses.</p>
     </header>
 
     <main>
 
-        <!-- UPCOMING TOUR -->
-        <section class="box">
-            <h2>Upcoming Tour</h2>
-
-            <p>
-                Get the details for the next Nakoma Tour,
-                including courses, schedule, travel information,
-                and everything you need to know for the trip.
-            </p>
-
-            <div class="links">
-                <a class="link" href="pinehurst-2027.html">
-                    Pinehurst 2027
-                </a>
-            </div>
+        <!-- PINEHURST -->
+        <section class="button-box">
+            <a class="button" href="pinehurst-2027.html">
+                Pinehurst 2027
+            </a>
         </section>
 
 
         <!-- TOUR HISTORY -->
-        <section class="box">
-            <h2>Tour History</h2>
-
-            <p>
-                Look back at previous Nakoma Tour trips,
-                including results, courses, and tournament history.
-            </p>
-
-            <div class="links">
-                <a class="link" href="sand-valley-2024.html">
-                    2024 Sand Valley Results
-                </a>
-
-                <a class="link" href="sand-valley-2026.html">
-                    2026 Sand Valley Results
-                </a>
-            </div>
+        <section class="button-box">
+            <a class="button" href="tour-history.html">
+                Tour History
+            </a>
         </section>
 
+
         <a class="back" href="index.html">
-            ← Back to Nakoma Tour Home
+            ← Back to Home
         </a>
 
     </main>
