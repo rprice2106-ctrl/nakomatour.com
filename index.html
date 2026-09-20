@@ -41,77 +41,68 @@
             padding: 0 20px;
         }
 
+        .choices {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
         .box {
             background: white;
             border-radius: 14px;
-            padding: 35px;
-            margin-bottom: 30px;
+            padding: 45px 35px;
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
             box-shadow: 0 4px 15px rgba(0,0,0,0.08);
         }
 
         .box h2 {
             margin-top: 0;
-            font-size: 30px;
-            color: #1f2a24;
+            font-size: 32px;
         }
 
         .box p {
             font-size: 17px;
             line-height: 1.6;
+            color: #555;
+            min-height: 55px;
         }
 
-        .links {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-            margin-top: 25px;
-        }
-
-        .link {
+        .button {
             display: block;
-            flex: 1;
-            min-width: 200px;
+            margin-top: 30px;
             background: #1f2a24;
             color: white;
             text-decoration: none;
             padding: 20px;
             border-radius: 10px;
-            text-align: center;
-            font-size: 18px;
+            font-size: 19px;
             font-weight: bold;
         }
 
-        .link:hover {
+        .button:hover {
             opacity: 0.85;
-        }
-
-        .champions {
-            margin-top: 25px;
-            padding: 20px;
-            background: #f0f1ed;
-            border-radius: 10px;
-            font-size: 17px;
-            line-height: 2;
         }
 
         footer {
             text-align: center;
-            padding: 30px 20px;
+            padding: 40px 20px;
             color: #777;
             font-size: 14px;
         }
 
-        @media (max-width: 600px) {
+        @media (max-width: 650px) {
             header {
                 padding: 90px 20px;
             }
 
             header h1 {
-                font-size: 40px;
+                font-size: 42px;
             }
 
             .box {
-                padding: 25px;
+                min-width: 100%;
             }
         }
     </style>
@@ -125,48 +116,38 @@
 
     <main>
 
-        <!-- NAKOMA TOUR -->
-        <section class="box">
-            <h2>Nakoma Tour</h2>
+        <div class="choices">
 
-            <p>
-                Welcome to the Nakoma Tour — home of tournament history,
-                standings, schedules, results, and everything surrounding
-                the annual competition.
-            </p>
+            <!-- NAKOMA TOUR -->
+            <section class="box">
+                <h2>Nakoma Tour</h2>
 
-            <div class="links">
-                <a class="link" href="#">
-                    Current Tour
+                <p>
+                    Annual golf trips, upcoming tours,
+                    results, history, and more.
+                </p>
+
+                <a class="button" href="nakoma-tour.html">
+                    Enter Nakoma Tour
                 </a>
-            </div>
-        </section>
+            </section>
 
 
-        <!-- BDO HISTORY -->
-        <section class="box">
-            <h2>BDO History</h2>
+            <!-- BDO -->
+            <section class="box">
+                <h2>BDO</h2>
 
-            <p>
-                Explore the history of the BDO, including past champions,
-                tournament results, and memorable moments.
-            </p>
+                <p>
+                    BDO tournament history, champions,
+                    results, standings, and more.
+                </p>
 
-            <div class="links">
-                <a class="link" href="#">
-                    2025
+                <a class="button" href="bdo.html">
+                    Enter BDO
                 </a>
+            </section>
 
-                <a class="link" href="#">
-                    2026
-                </a>
-            </div>
-
-            <div class="champions">
-                <div><strong>🏆 2026</strong> — Kent Davyduke &amp; Mike Doers</div>
-                <div><strong>🏆 2025</strong> — Mickey Defilippo &amp; Keith Batenhorst</div>
-            </div>
-        </section>
+        </div>
 
     </main>
 
