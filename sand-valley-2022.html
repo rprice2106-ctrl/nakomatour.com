@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Sand Valley 2022 | Nakoma Tour</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;800&family=Karla:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --paper: #f6f1e6;
+            --card: #fffaf1;
+            --ink: #24291f;
+            --muted: #6f6a5c;
+            --green: #33513a;
+            --green-dark: #22331f;
+            --clay: #c2703d;
+            --line: #e3d9c4;
+            box-sizing: border-box;
+            padding-top: env(safe-area-inset-top, 0px);
+            padding-bottom: env(safe-area-inset-bottom, 0px);
+        }
+
+        * {
+            box-sizing: inherit;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            font-family: 'Karla', Arial, Helvetica, sans-serif;
+            background: var(--paper);
+            color: var(--ink);
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--green), var(--green-dark));
+            color: #fffaf1;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-family: 'Fraunces', Georgia, serif;
+            font-size: 40px;
+            letter-spacing: 2px;
+            font-weight: 800;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        .gif-frame {
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            padding: 16px;
+            box-shadow: 0 6px 20px rgba(40,30,10,0.08);
+            max-width: 700px;
+            width: 100%;
+        }
+
+        .gif-frame img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 10px;
+        }
+
+        .back {
+            display: block;
+            text-align: center;
+            margin: 30px 0 0;
+            color: var(--green);
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .back:hover {
+            color: var(--green-dark);
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: var(--muted);
+            font-size: 14px;
+            border-top: 1px solid var(--line);
+        }
+
+        @media (max-width: 600px) {
+            header {
+                padding: 45px 20px;
+            }
+
+            header h1 {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Sand Valley 2022</h1>
+    </header>
+
+    <main>
+        <div>
+            <div class="gif-frame">
+                <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExb3NoY3BtZmoxdHJyMW0zY3Z3bTNjd2dwbm0yZ3FlM3hkMm5oODZjaCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/B6i4lPxX9RI7GcenNt/giphy.gif" alt="Sand Valley 2022">
+            </div>
+            <a class="back" href="tour-history.html">
+                ← Back to Tour History
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        Nakoma Tour © 2026
+    </footer>
+
+</body>
+</html>
