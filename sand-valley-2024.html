@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Sand Valley 2024 Results | Nakoma Tour</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;800&family=Karla:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --paper: #f6f1e6;
+            --card: #fffaf1;
+            --panel: #efe7d4;
+            --ink: #24291f;
+            --muted: #6f6a5c;
+            --green: #33513a;
+            --green-dark: #22331f;
+            --clay: #c2703d;
+            --line: #e3d9c4;
+            box-sizing: border-box;
+            padding-top: env(safe-area-inset-top, 0px);
+            padding-bottom: env(safe-area-inset-bottom, 0px);
+        }
+
+        * {
+            box-sizing: inherit;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Karla', Arial, Helvetica, sans-serif;
+            background: var(--paper);
+            color: var(--ink);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--green), var(--green-dark));
+            color: #fffaf1;
+            text-align: center;
+            padding: 90px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-family: 'Fraunces', Georgia, serif;
+            font-size: 54px;
+            letter-spacing: 3px;
+            font-weight: 800;
+        }
+
+        header p {
+            margin: 15px 0 0;
+            font-size: 14px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: #e7dfcc;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            padding: 35px;
+            margin-bottom: 26px;
+            box-shadow: 0 6px 20px rgba(40,30,10,0.06);
+        }
+
+        .section h2 {
+            margin-top: 0;
+            font-family: 'Fraunces', Georgia, serif;
+            font-size: 26px;
+            font-weight: 600;
+            border-bottom: 2px solid var(--line);
+            padding-bottom: 14px;
+        }
+
+        .section h3 {
+            font-family: 'Fraunces', Georgia, serif;
+            font-size: 19px;
+            font-weight: 600;
+            margin: 26px 0 12px;
+            color: var(--green);
+        }
+
+        .section h3:first-of-type {
+            margin-top: 22px;
+        }
+
+        /* FINAL SCORE */
+
+        .final-score {
+            background: var(--panel);
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .final-score .eyebrow {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--clay);
+            margin-bottom: 10px;
+        }
+
+        .final-score .score {
+            font-family: 'Fraunces', Georgia, serif;
+            font-size: 30px;
+            font-weight: 800;
+        }
+
+        /* ROSTERS */
+
+        .teams-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+            margin-top: 22px;
+        }
+
+        .team-box {
+            background: var(--panel);
+            border-radius: 12px;
+            padding: 22px;
+        }
+
+        .team-box h3 {
+            margin: 0 0 12px;
+        }
+
+        .team-box ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .team-box li {
+            font-size: 15px;
+            padding: 6px 0;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .team-box li:last-child {
+            border-bottom: none;
+        }
+
+        .team-box li.sub {
+            color: var(--muted);
+            font-style: italic;
+        }
+
+        /* MATCH RESULTS */
+
+        .match-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .match-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--line);
+            font-size: 15.5px;
+        }
+
+        .match-list li:last-child {
+            border-bottom: none;
+        }
+
+        .win {
+            font-weight: 700;
+            color: var(--green);
+        }
+
+        /* LEADERBOARD TABLE */
+
+        table.leaderboard {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 22px;
+        }
+
+        table.leaderboard th,
+        table.leaderboard td {
+            text-align: left;
+            padding: 10px 12px;
+            font-size: 15px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        table.leaderboard th {
+            font-family: 'Fraunces', Georgia, serif;
+            font-weight: 600;
+            color: var(--green);
+            border-bottom: 2px solid var(--line);
+        }
+
+        table.leaderboard td.points {
+            font-weight: 700;
+            text-align: right;
+        }
+
+        table.leaderboard th.points {
+            text-align: right;
+        }
+
+        table.leaderboard tr:nth-child(1) td {
+            background: var(--panel);
+        }
+
+        /* BACK LINK */
+
+        .back {
+            display: inline-block;
+            margin-top: 5px;
+            color: var(--green);
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .back:hover {
+            color: var(--green-dark);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--muted);
+            font-size: 14px;
+            border-top: 1px solid var(--line);
+        }
+
+        @media (max-width: 700px) {
+            header {
+                padding: 70px 20px;
+            }
+
+            header h1 {
+                font-size: 38px;
+                letter-spacing: 2px;
+            }
+
+            .section {
+                padding: 24px;
+            }
+
+            .team-box {
+                padding: 14px;
+            }
+
+            .team-box li {
+                font-size: 13px;
+            }
+
+            table.leaderboard th,
+            table.leaderboard td {
+                font-size: 13.5px;
+                padding: 8px 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Sand Valley 2024</h1>
+        <p>Team Match Play Results</p>
+    </header>
+
+    <main>
+
+        <!-- 2024 SAND VALLEY -->
+        <section class="section">
+            <h2>2024 Sand Valley Trip</h2>
+
+            <div class="final-score">
+                <div class="eyebrow">Final Score</div>
+                <div class="score">Team Resop wins, 36&ndash;24</div>
+            </div>
+
+            <h3>Weekend Points Leaderboard</h3>
+            <table class="leaderboard">
+                <thead>
+                    <tr>
+                        <th>Player</th>
+                        <th class="points">Points</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Catul Kiti</td><td class="points">7.5</td></tr>
+                    <tr><td>Keith Batenhorst</td><td class="points">7</td></tr>
+                    <tr><td>Tyler Wedel</td><td class="points">6.5</td></tr>
+                    <tr><td>Tucker Smith</td><td class="points">6</td></tr>
+                    <tr><td>Ethan Miller</td><td class="points">6</td></tr>
+                    <tr><td>Ty Weimer</td><td class="points">6</td></tr>
+                    <tr><td>Bobby Price</td><td class="points">5.5</td></tr>
+                    <tr><td>James West</td><td class="points">4.5</td></tr>
+                    <tr><td>Ben Filkouski</td><td class="points">4.5</td></tr>
+                    <tr><td>Landon Vinger</td><td class="points">4</td></tr>
+                    <tr><td>Andrew Buss</td><td class="points">4</td></tr>
+                    <tr><td>Michael Johnson</td><td class="points">4</td></tr>
+                    <tr><td>Alex Filkouski</td><td class="points">3</td></tr>
+                    <tr><td>Pete Daniels</td><td class="points">3</td></tr>
+                    <tr><td>Austin Resop</td><td class="points">3</td></tr>
+                    <tr><td>Chris Streff</td><td class="points">3</td></tr>
+                    <tr><td>Nick Oliphant</td><td class="points">2.5</td></tr>
+                    <tr><td>Kent Davyduke</td><td class="points">2</td></tr>
+                    <tr><td>Alex Yde</td><td class="points">2</td></tr>
+                    <tr><td>Andrew Klein</td><td class="points">2</td></tr>
+                    <tr><td>Chris Peterson</td><td class="points">2</td></tr>
+                    <tr><td>John D'Orazio</td><td class="points">1.5</td></tr>
+                    <tr><td>Mike Doers</td><td class="points">0.5</td></tr>
+                </tbody>
+            </table>
+
+            <h3>Rosters</h3>
+            <div class="teams-grid">
+
+                <div class="team-box">
+                    <h3>Team Vinger</h3>
+                    <ul>
+                        <li>Landon Vinger</li>
+                        <li>Kent Davyduke</li>
+                        <li>Andrew Buss</li>
+                        <li>Alex Yde</li>
+                        <li>Bobby Price</li>
+                        <li>Al Filkouski</li>
+                        <li>Andrew Klein</li>
+                        <li>Pete Daniels</li>
+                        <li>James West</li>
+                        <li>John D'Orazio</li>
+                        <li class="sub">Sub: Chris Peterson</li>
+                    </ul>
+                </div>
+
+                <div class="team-box">
+                    <h3>Team Resop</h3>
+                    <ul>
+                        <li>Austin Resop</li>
+                        <li>Tyler Wedel</li>
+                        <li>Nick Oliphant</li>
+                        <li>Michael Johnson</li>
+                        <li>Tucker Smith</li>
+                        <li>Catul Kiti</li>
+                        <li>Ethan Miller</li>
+                        <li>Ty Weimer</li>
+                        <li>Keith Batenhorst</li>
+                        <li>Ben Filkouski</li>
+                        <li class="sub">Sub: Chris Streff</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <h3>Thursday Lido Four-Ball Results</h3>
+            <ul class="match-list">
+                <li><span class="win">Andrew Klein &amp; James West</span> win 2&ndash;1 over Michael Johnson &amp; Keith Batenhorst</li>
+                <li><span class="win">Tucker Smith &amp; Catul Kiti</span> win 3&ndash;0 over Landon Vinger &amp; Alex Yde</li>
+                <li><span class="win">Kent Davyduke &amp; Alex Filkouski</span> win 2&ndash;1 over Austin Resop &amp; Ethan Miller</li>
+                <li><span class="win">Tyler Wedel &amp; Ben Filkouski</span> win 2.5&ndash;0.5 over John D'Orazio &amp; Mike Doers</li>
+                <li><span class="win">Bobby Price &amp; Pete Daniels</span> win 2.5&ndash;0.5 over Nick Oliphant &amp; Ty Weimer</li>
+            </ul>
+
+            <h3>Mammoth Dunes Twins Results</h3>
+            <ul class="match-list">
+                <li><span class="win">Keith Batenhorst &amp; Ty Weimer</span> win 3&ndash;0 over Kent Davyduke &amp; Alex Yde</li>
+                <li><span class="win">Ben Filkouski &amp; Ethan Miller</span> win 2&ndash;1 over James West &amp; John D'Orazio</li>
+                <li><span class="win">Tyler Wedel &amp; Catul Kiti</span> win 3&ndash;0 over Andrew Klein &amp; Pete Daniels</li>
+                <li><span class="win">Michael Johnson &amp; Tucker Smith</span> win 2&ndash;1 over Bobby Price &amp; Alex Filkouski</li>
+                <li><span class="win">Austin Resop &amp; Nick Oliphant</span> win 2&ndash;1 over Landon Vinger &amp; Andrew Buss</li>
+            </ul>
+
+            <h3>Singles Match Results</h3>
+            <ul class="match-list">
+                <li><span class="win">Bobby Price</span> defeats Tyler Wedel, 2&ndash;1</li>
+                <li><span class="win">Chris Peterson</span> defeats Michael Johnson, 2&ndash;1</li>
+                <li><span class="win">Chris Streff</span> defeats Kent Davyduke, 3&ndash;0</li>
+                <li>James West &amp; Catul Kiti halved, 1.5&ndash;1.5</li>
+                <li><span class="win">Andrew Buss</span> defeats Nick Oliphant, 3&ndash;0</li>
+                <li><span class="win">Landon Vinger</span> defeats Austin Resop, 3&ndash;0</li>
+                <li><span class="win">Alex Yde</span> defeats Tucker Smith, 2&ndash;1</li>
+                <li><span class="win">Ethan Miller</span> defeats Alex Filkouski, 3&ndash;0</li>
+                <li><span class="win">Ty Weimer</span> defeats Pete Daniels, 2.5&ndash;0.5</li>
+                <li><span class="win">Keith Batenhorst</span> defeats John D'Orazio, 3&ndash;0</li>
+            </ul>
+
+        </section>
+
+        <!-- BACK -->
+        <a class="back" href="tour-history.html">
+            ← Back to Tour History
+        </a>
+
+    </main>
+
+    <footer>
+        Nakoma Tour © 2026
+    </footer>
+
+</body>
+</html>
