@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Tour History — Nakoma Tour</title>
+    <title>Tour History | Nakoma Tour</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;800&family=Karla:wght@400;600;700&display=swap" rel="stylesheet">
@@ -29,58 +29,82 @@
 
         body {
             margin: 0;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             font-family: 'Karla', Arial, Helvetica, sans-serif;
             background: var(--paper);
             color: var(--ink);
             line-height: 1.6;
         }
 
-        main {
-            max-width: 480px;
-            width: 100%;
-            margin: 40px auto;
-            padding: 0 20px;
+        header {
+            background: linear-gradient(135deg, var(--green), var(--green-dark));
+            color: #fffaf1;
             text-align: center;
+            padding: 100px 20px;
         }
 
-        .card {
+        header h1 {
+            margin: 0;
+            font-family: 'Fraunces', Georgia, serif;
+            font-size: 52px;
+            letter-spacing: 4px;
+            font-weight: 800;
+        }
+
+        header p {
+            margin: 15px 0 0;
+            font-size: 14px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: #e7dfcc;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .button-box {
             background: var(--card);
             border: 1px solid var(--line);
             border-radius: 16px;
-            padding: 50px 34px;
+            padding: 34px;
+            margin-bottom: 22px;
             box-shadow: 0 6px 20px rgba(40,30,10,0.06);
+            text-align: center;
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
         }
 
-        .eyebrow {
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-size: 13px;
-            font-weight: 700;
-            color: var(--clay);
-            margin-bottom: 14px;
+        .button-box:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 26px rgba(40,30,10,0.10);
         }
 
-        h1 {
+        .button {
+            display: block;
+            background: var(--green);
+            color: #fffaf1;
+            text-decoration: none;
+            padding: 22px;
+            border-radius: 10px;
             font-family: 'Fraunces', Georgia, serif;
-            font-size: 34px;
-            font-weight: 800;
-            margin: 0 0 14px;
+            font-size: 23px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: background 0.15s ease;
         }
 
-        .card p {
-            color: var(--muted);
-            font-size: 16px;
-            margin: 0;
+        .button:hover {
+            background: var(--green-dark);
         }
 
         .back {
             display: inline-block;
-            margin-top: 28px;
-            color: var(--green);
+            width: 100%;
+            text-align: center;
+            margin-top: 30px;
+            color: var(--clay);
             text-decoration: none;
             font-weight: 700;
             font-size: 15px;
@@ -90,13 +114,31 @@
             color: var(--green-dark);
         }
 
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--muted);
+            font-size: 14px;
+            border-top: 1px solid var(--line);
+        }
+
         @media (max-width: 600px) {
-            .card {
-                padding: 40px 24px;
+            header {
+                padding: 80px 20px;
             }
 
-            h1 {
-                font-size: 28px;
+            header h1 {
+                font-size: 38px;
+                letter-spacing: 3px;
+            }
+
+            .button-box {
+                padding: 24px;
+            }
+
+            .button {
+                font-size: 20px;
+                padding: 18px;
             }
         }
     </style>
@@ -104,14 +146,28 @@
 
 <body>
 
+    <header>
+        <h1>TOUR HISTORY</h1>
+        <p>Every trip, every result</p>
+    </header>
+
     <main>
-        <div class="card">
-            <div class="eyebrow">Tour History</div>
-            <h1>Coming Soon</h1>
-            <p>We're putting together the full story of the Nakoma Tour. Check back soon.</p>
-        </div>
-        <a class="back" href="nakoma-tour.html">← Back to Nakoma Tour</a>
+
+        <section class="button-box">
+            <a class="button" href="sand-valley-2024.html">
+                Sand Valley 2024 Results
+            </a>
+        </section>
+
+        <a class="back" href="nakoma-tour.html">
+            ← Back to Nakoma Tour
+        </a>
+
     </main>
+
+    <footer>
+        Nakoma Tour © 2026
+    </footer>
 
 </body>
 </html>
