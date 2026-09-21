@@ -1,1 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>BDO | Nakoma Tour</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f4f1;
+            color: #1f2a24;
+        }
+
+        header {
+            background-image:
+                linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+                url('commons.jpeg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 130px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 64px;
+            letter-spacing: 5px;
+            font-weight: 800;
+        }
+
+        header p {
+            margin: 15px 0 0;
+            font-size: 20px;
+            letter-spacing: 2px;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            background: white;
+            border-radius: 14px;
+            padding: 35px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .section h2 {
+            margin-top: 0;
+            font-size: 30px;
+            border-bottom: 2px solid #e1e2de;
+            padding-bottom: 12px;
+        }
+
+        /* 2026 CHAMPION */
+
+        .champion-card {
+            background: #f0f1ed;
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            margin-top: 25px;
+        }
+
+        .trophy {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .champion-year {
+            font-size: 18px;
+            font-weight: bold;
+            color: #666;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .champion-name {
+            font-size: 28px;
+            font-weight: 800;
+        }
+
+        /* BRACKET IMAGE */
+
+        .bracket-container {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .bracket-container img {
+            width: 100%;
+            max-width: 1000px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 12px;
+        }
+
+        /* 2025 CHAMPION */
+
+        .history-card {
+            background: #f0f1ed;
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            margin-top: 25px;
+        }
+
+        .history-year {
+            font-size: 18px;
+            font-weight: bold;
+            color: #666;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .history-name {
+            font-size: 26px;
+            font-weight: 800;
+        }
+
+        /* BACK LINK */
+
+        .back {
+            display: inline-block;
+            margin-top: 5px;
+            color: #1f2a24;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #777;
+            font-size: 14px;
+        }
+
+        @media (max-width: 700px) {
+
+            header {
+                padding: 90px 20px;
+            }
+
+            header h1 {
+                font-size: 48px;
+            }
+
+            header p {
+                font-size: 17px;
+            }
+
+            .section {
+                padding: 25px;
+            }
+
+            .champion-name {
+                font-size: 23px;
+            }
+
+            .history-name {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+        <h1>BDO</h1>
+        <p>BDO CHAMPIONSHIP HISTORY</p>
+    </header>
+
+
+    <main>
+
+        <!-- 2026 CHAMPIONS -->
+
+        <section class="section">
+
+            <h2>2026 Champions</h2>
+
+            <div class="champion-card">
+
+                <div class="trophy">🏆</div>
+
+                <div class="champion-year">
+                    2026 BDO CHAMPIONS
+                </div>
+
+                <div class="champion-name">
+                    Kent Davyduke &amp; Mike Doers
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- 2026 BDO BRACKET -->
+
+        <section class="section">
+
+            <h2>2026 BDO Championship</h2>
+
+            <div class="bracket-container">
+
+                <img
+                    src="bdo.png"
+                    alt="2026 BDO Championship Bracket"
+                >
+
+            </div>
+
+        </section>
+
+
+        <!-- BDO HISTORY -->
+
+        <section class="section">
+
+            <h2>2025 Champions</h2>
+
+            <div class="history-card">
+
+                <div class="trophy">🏆</div>
+
+                <div class="history-year">
+                    2025 BDO CHAMPIONS
+                </div>
+
+                <div class="history-name">
+                    Keith Batenhorst &amp; Mickey Defilippo
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- BACK -->
+
+        <a class="back" href="index.html">
+            ← Back to Home
+        </a>
+
+    </main>
+
+
+    <footer>
+        Nakoma Tour © 2026
+    </footer>
+
+</body>
+</html>
