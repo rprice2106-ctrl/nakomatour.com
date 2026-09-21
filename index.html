@@ -2,37 +2,65 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Nakoma Tour</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;800&family=Karla:wght@400;600;700&display=swap" rel="stylesheet">
 
     <style>
-        * {
+        :root {
+            --paper: #f6f1e6;
+            --card: #fffaf1;
+            --ink: #24291f;
+            --muted: #6f6a5c;
+            --green: #33513a;
+            --green-dark: #22331f;
+            --clay: #c2703d;
+            --line: #e3d9c4;
             box-sizing: border-box;
+            padding-top: env(safe-area-inset-top, 0px);
+            padding-bottom: env(safe-area-inset-bottom, 0px);
+        }
+
+        * {
+            box-sizing: inherit;
         }
 
         body {
             margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f4f4f1;
-            color: #1f2a24;
+            font-family: 'Karla', Arial, Helvetica, sans-serif;
+            background: var(--paper);
+            color: var(--ink);
+            line-height: 1.6;
         }
 
         header {
             background-image:
-                linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+                linear-gradient(rgba(20,25,15,0.55), rgba(20,25,15,0.55)),
                 url('commons.jpeg');
             background-size: cover;
             background-position: center;
-            color: white;
+            color: #fffaf1;
             text-align: center;
             padding: 120px 20px;
         }
 
         header h1 {
             margin: 0;
+            font-family: 'Fraunces', Georgia, serif;
             font-size: 56px;
             letter-spacing: 4px;
             font-weight: 800;
+        }
+
+        header p {
+            margin: 15px 0 0;
+            font-size: 14px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: #e7dfcc;
         }
 
         main {
@@ -43,53 +71,65 @@
 
         .choices {
             display: flex;
-            gap: 30px;
+            gap: 24px;
             flex-wrap: wrap;
         }
 
         .box {
-            background: white;
-            border-radius: 14px;
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: 16px;
             padding: 45px 35px;
             flex: 1;
             min-width: 300px;
             text-align: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            box-shadow: 0 6px 20px rgba(40,30,10,0.06);
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+
+        .box:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 26px rgba(40,30,10,0.10);
         }
 
         .box h2 {
             margin-top: 0;
-            font-size: 32px;
+            font-family: 'Fraunces', Georgia, serif;
+            font-size: 30px;
+            font-weight: 600;
         }
 
         .box p {
-            font-size: 17px;
+            font-size: 16px;
             line-height: 1.6;
-            color: #555;
+            color: var(--muted);
             min-height: 55px;
         }
 
         .button {
             display: block;
-            margin-top: 30px;
-            background: #1f2a24;
-            color: white;
+            margin-top: 26px;
+            background: var(--green);
+            color: #fffaf1;
             text-decoration: none;
-            padding: 20px;
+            padding: 18px;
             border-radius: 10px;
-            font-size: 19px;
-            font-weight: bold;
+            font-family: 'Fraunces', Georgia, serif;
+            font-size: 18px;
+            font-weight: 600;
+            transition: background 0.15s ease;
         }
 
         .button:hover {
-            opacity: 0.85;
+            background: var(--green-dark);
         }
 
         footer {
             text-align: center;
             padding: 40px 20px;
-            color: #777;
+            color: var(--muted);
             font-size: 14px;
+            border-top: 1px solid var(--line);
         }
 
         @media (max-width: 650px) {
@@ -98,11 +138,13 @@
             }
 
             header h1 {
-                font-size: 42px;
+                font-size: 40px;
+                letter-spacing: 2px;
             }
 
             .box {
                 min-width: 100%;
+                padding: 32px 24px;
             }
         }
     </style>
@@ -112,6 +154,7 @@
 
     <header>
         <h1>NAKOMA TOUR</h1>
+        <p>Golf Trips &amp; History</p>
     </header>
 
     <main>
