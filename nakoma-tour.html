@@ -2,87 +2,157 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Nakoma Tour</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;800&family=Karla:wght@400;600;700&display=swap" rel="stylesheet">
 
     <style>
-        * {
+        :root {
+            --paper: #f6f1e6;
+            --card: #fffaf1;
+            --ink: #24291f;
+            --muted: #6f6a5c;
+            --green: #33513a;
+            --green-dark: #22331f;
+            --clay: #c2703d;
+            --line: #e3d9c4;
             box-sizing: border-box;
+            padding-top: env(safe-area-inset-top, 0px);
+            padding-bottom: env(safe-area-inset-bottom, 0px);
+        }
+
+        * {
+            box-sizing: inherit;
         }
 
         body {
             margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background: 
-#f4f4f1;
-            color: 
-#1f2a24;
+            font-family: 'Karla', Arial, Helvetica, sans-serif;
+            background: var(--paper);
+            color: var(--ink);
+            line-height: 1.6;
         }
 
         header {
             background-image:
-                linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+                linear-gradient(rgba(20,25,15,0.55), rgba(20,25,15,0.55)),
                 url('commons.jpeg');
             background-size: cover;
             background-position: center;
-            color: white;
+            color: #fffaf1;
             text-align: center;
-            padding: 100px 20px;
+            padding: 110px 20px;
         }
 
         header h1 {
             margin: 0;
-            font-size: 52px;
-            letter-spacing: 4px;
+            font-family: 'Fraunces', Georgia, serif;
+            font-size: 54px;
+            letter-spacing: 5px;
             font-weight: 800;
+        }
+
+        header p {
+            margin: 14px 0 0;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 13px;
+            font-weight: 600;
+            color: #e7dfcc;
         }
 
         main {
             max-width: 800px;
-            margin: 50px auto;
+            margin: 55px auto;
             padding: 0 20px;
         }
 
         .button-box {
-            background: white;
-            border-radius: 14px;
-            padding: 40px;
-            margin-bottom: 25px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            padding: 34px;
+            margin-bottom: 22px;
+            box-shadow: 0 6px 20px rgba(40,30,10,0.06);
             text-align: center;
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+
+        .button-box:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 26px rgba(40,30,10,0.10);
         }
 
         .button {
             display: block;
-            background: 
-#1f2a24;
-            color: white;
+            background: var(--green);
+            color: #fffaf1;
             text-decoration: none;
-            padding: 25px;
+            padding: 22px;
             border-radius: 10px;
-            font-size: 24px;
-            font-weight: bold;
+            font-family: 'Fraunces', Georgia, serif;
+            font-size: 23px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: background 0.15s ease;
         }
 
         .button:hover {
-            opacity: 0.85;
+            background: var(--green-dark);
         }
 
         .back {
-            display: block;
+            display: inline-block;
+            width: 100%;
             text-align: center;
-            margin-top: 35px;
-            color: 
-#1f2a24;
+            margin-top: 30px;
+            color: var(--clay);
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 700;
+            font-size: 15px;
+        }
+
+        .back:hover {
+            color: var(--green-dark);
+        }
+
+        .section-label {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--clay);
+            margin: 0 0 14px 4px;
+        }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin: 20px 0 26px;
+        }
+
+        .divider::before,
+        .divider::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: var(--line);
+        }
+
+        .divider span {
+            padding: 0 14px;
+            font-size: 18px;
         }
 
         footer {
             text-align: center;
             padding: 40px 20px;
-            color: #777;
+            color: var(--muted);
             font-size: 14px;
+            border-top: 1px solid var(--line);
         }
 
         @media (max-width: 600px) {
@@ -91,15 +161,17 @@
             }
 
             header h1 {
-                font-size: 40px;
+                font-size: 38px;
+                letter-spacing: 3px;
             }
 
             .button-box {
-                padding: 25px;
+                padding: 24px;
             }
 
             .button {
                 font-size: 20px;
+                padding: 18px;
             }
         }
     </style>
@@ -109,9 +181,12 @@
 
     <header>
         <h1>NAKOMA TOUR</h1>
+        <p>Golf Trips &amp; History</p>
     </header>
 
     <main>
+
+        <div class="section-label">Upcoming Events</div>
 
         <section class="button-box">
             <a class="button" href="pinehurst-2027.html">
@@ -124,6 +199,8 @@
                 Sand Valley 2028
             </a>
         </section>
+
+        <div class="divider"><span>⛳</span></div>
 
         <section class="button-box">
             <a class="button" href="tour-history.html">
