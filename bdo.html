@@ -184,6 +184,83 @@
             border-top: 1px solid var(--line);
         }
 
+        /* PASSWORD GATE */
+
+        #gate {
+            position: fixed;
+            inset: 0;
+            background: var(--paper);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            padding: 20px;
+        }
+
+        #gate .gate-box {
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            padding: 44px 34px;
+            max-width: 360px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 6px 20px rgba(40,30,10,0.08);
+        }
+
+        #gate h2 {
+            margin: 0 0 8px;
+            font-family: 'Fraunces', Georgia, serif;
+            font-size: 26px;
+        }
+
+        #gate p {
+            margin: 0 0 20px;
+            color: var(--muted);
+            font-size: 15px;
+        }
+
+        #gate input {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            font-size: 16px;
+            font-family: inherit;
+            margin-bottom: 14px;
+            background: var(--paper);
+            color: var(--ink);
+        }
+
+        #gate button {
+            width: 100%;
+            padding: 12px 14px;
+            border: none;
+            border-radius: 8px;
+            background: var(--green);
+            color: #fffaf1;
+            font-size: 16px;
+            font-weight: 700;
+            font-family: inherit;
+            cursor: pointer;
+        }
+
+        #gate button:hover {
+            background: var(--green-dark);
+        }
+
+        #gate .error {
+            color: var(--clay);
+            font-size: 13px;
+            font-weight: 600;
+            margin-top: 10px;
+            min-height: 16px;
+        }
+
+        body.locked > *:not(#gate) {
+            display: none;
+        }
+
         @media (max-width: 700px) {
 
             header {
@@ -214,7 +291,46 @@
     </style>
 </head>
 
-<body>
+<body class="locked">
+
+    <!-- PASSWORD GATE -->
+    <div id="gate">
+        <div class="gate-box">
+            <h2>⛳ BDO</h2>
+            <p>Enter the password to view this page.</p>
+            <input type="password" id="gate-input" placeholder="Password" autocomplete="off">
+            <button onclick="checkPassword()">Enter</button>
+            <div class="error" id="gate-error"></div>
+        </div>
+    </div>
+
+    <script>
+        const GATE_PASSWORD = "BDO";
+        const GATE_KEY = "bdo_unlocked";
+
+        function unlock() {
+            document.body.classList.remove("locked");
+            document.getElementById("gate").style.display = "none";
+        }
+
+        function checkPassword() {
+            const input = document.getElementById("gate-input").value;
+            if (input === GATE_PASSWORD) {
+                localStorage.setItem(GATE_KEY, "true");
+                unlock();
+            } else {
+                document.getElementById("gate-error").textContent = "Incorrect password. Try again.";
+            }
+        }
+
+        document.getElementById("gate-input").addEventListener("keydown", function(e) {
+            if (e.key === "Enter") checkPassword();
+        });
+
+        if (localStorage.getItem(GATE_KEY) === "true") {
+            unlock();
+        }
+    </script>
 
     <!-- HEADER -->
 
