@@ -2,35 +2,55 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
     <title>BDO | Nakoma Tour</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;800&family=Karla:wght@400;600;700&display=swap" rel="stylesheet">
 
     <style>
-        * {
+        :root {
+            --paper: #f6f1e6;
+            --card: #fffaf1;
+            --panel: #efe7d4;
+            --ink: #24291f;
+            --muted: #6f6a5c;
+            --green: #33513a;
+            --green-dark: #22331f;
+            --clay: #c2703d;
+            --line: #e3d9c4;
             box-sizing: border-box;
+            padding-top: env(safe-area-inset-top, 0px);
+            padding-bottom: env(safe-area-inset-bottom, 0px);
+        }
+
+        * {
+            box-sizing: inherit;
         }
 
         body {
             margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f4f4f1;
-            color: #1f2a24;
+            font-family: 'Karla', Arial, Helvetica, sans-serif;
+            background: var(--paper);
+            color: var(--ink);
+            line-height: 1.6;
         }
 
         header {
             background-image:
-                linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+                linear-gradient(rgba(20,25,15,0.55), rgba(20,25,15,0.55)),
                 url('commons.jpeg');
             background-size: cover;
             background-position: center;
-            color: white;
+            color: #fffaf1;
             text-align: center;
             padding: 130px 20px;
         }
 
         header h1 {
             margin: 0;
+            font-family: 'Fraunces', Georgia, serif;
             font-size: 64px;
             letter-spacing: 5px;
             font-weight: 800;
@@ -38,8 +58,11 @@
 
         header p {
             margin: 15px 0 0;
-            font-size: 20px;
+            font-size: 14px;
             letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: #e7dfcc;
         }
 
         main {
@@ -49,28 +72,53 @@
         }
 
         .section {
-            background: white;
-            border-radius: 14px;
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: 16px;
             padding: 35px;
-            margin-bottom: 30px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            margin-bottom: 26px;
+            box-shadow: 0 6px 20px rgba(40,30,10,0.06);
         }
 
         .section h2 {
             margin-top: 0;
-            font-size: 30px;
-            border-bottom: 2px solid #e1e2de;
-            padding-bottom: 12px;
+            font-family: 'Fraunces', Georgia, serif;
+            font-size: 28px;
+            font-weight: 600;
+            border-bottom: 2px solid var(--line);
+            padding-bottom: 14px;
         }
 
-        /* 2026 CHAMPION */
+        .section p {
+            margin: 18px 0 0;
+            color: var(--muted);
+            font-size: 17px;
+        }
 
-        .champion-card {
-            background: #f0f1ed;
+        .origin-image {
+            margin-top: 22px;
+            text-align: center;
+        }
+
+        .origin-image img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 12px;
+            border: 1px solid var(--line);
+        }
+
+        /* CHAMPION CARDS */
+
+        .champion-card,
+        .history-card {
+            background: var(--panel);
             border-radius: 12px;
             padding: 30px;
             text-align: center;
-            margin-top: 25px;
+            margin-top: 22px;
         }
 
         .trophy {
@@ -78,56 +126,26 @@
             margin-bottom: 10px;
         }
 
-        .champion-year {
-            font-size: 18px;
-            font-weight: bold;
-            color: #666;
-            margin-bottom: 10px;
-            letter-spacing: 1px;
-        }
-
-        .champion-name {
-            font-size: 28px;
-            font-weight: 800;
-        }
-
-        /* BRACKET IMAGE */
-
-        .bracket-container {
-            margin-top: 30px;
-            text-align: center;
-        }
-
-        .bracket-container img {
-            width: 100%;
-            max-width: 1000px;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-            border-radius: 12px;
-        }
-
-        /* 2025 CHAMPION */
-
-        .history-card {
-            background: #f0f1ed;
-            border-radius: 12px;
-            padding: 30px;
-            text-align: center;
-            margin-top: 25px;
-        }
-
+        .champion-year,
         .history-year {
-            font-size: 18px;
-            font-weight: bold;
-            color: #666;
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--clay);
+            text-transform: uppercase;
+            letter-spacing: 2px;
             margin-bottom: 10px;
-            letter-spacing: 1px;
+        }
+
+        .champion-name,
+        .history-name {
+            font-family: 'Fraunces', Georgia, serif;
+            font-size: 27px;
+            font-weight: 600;
+            color: var(--ink);
         }
 
         .history-name {
-            font-size: 26px;
-            font-weight: 800;
+            font-size: 25px;
         }
 
         /* BACK LINK */
@@ -135,20 +153,21 @@
         .back {
             display: inline-block;
             margin-top: 5px;
-            color: #1f2a24;
+            color: var(--green);
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 700;
         }
 
         .back:hover {
-            text-decoration: underline;
+            color: var(--green-dark);
         }
 
         footer {
             text-align: center;
             padding: 40px 20px;
-            color: #777;
+            color: var(--muted);
             font-size: 14px;
+            border-top: 1px solid var(--line);
         }
 
         @media (max-width: 700px) {
@@ -158,11 +177,12 @@
             }
 
             header h1 {
-                font-size: 48px;
+                font-size: 44px;
+                letter-spacing: 3px;
             }
 
             header p {
-                font-size: 17px;
+                font-size: 12px;
             }
 
             .section {
@@ -170,11 +190,11 @@
             }
 
             .champion-name {
-                font-size: 23px;
+                font-size: 22px;
             }
 
             .history-name {
-                font-size: 22px;
+                font-size: 20px;
             }
         }
     </style>
@@ -186,11 +206,36 @@
 
     <header>
         <h1>BDO</h1>
-        <p>BDO CHAMPIONSHIP HISTORY</p>
+        <p>BDO Championship History</p>
     </header>
 
 
     <main>
+
+        <!-- ORIGIN STORY -->
+
+        <section class="section">
+
+            <h2>How It Started</h2>
+
+            <p>
+                The BDO was launched in 2025 after the OG Dogs, Ethan Miller &amp; Alex Yde
+                &mdash; two certified high-handicappers who were about as lost in their
+                golf swings as they were in their own heads &mdash; decided the best way
+                to make up for their game was to bet on it. They went looking for $100
+                matches against anyone dumb enough to take the bait, and it turned out
+                plenty of people were. A line formed of players happy to take their cash,
+                and out of that mess the BDO was born &mdash; a team match play
+                competition that kicked off with 12 teams in 2025 and grew to 16 teams
+                by 2026.
+            </p>
+
+            <div class="origin-image">
+                <img src="bdobros.jpg" alt="Ethan Miller and Alex Yde, the OG Dogs">
+            </div>
+
+        </section>
+
 
         <!-- 2026 CHAMPIONS -->
 
@@ -203,30 +248,12 @@
                 <div class="trophy">🏆</div>
 
                 <div class="champion-year">
-                    2026 BDO CHAMPIONS
+                    2026 BDO Champions
                 </div>
 
                 <div class="champion-name">
                     Kent Davyduke &amp; Mike Doers
                 </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- 2026 BDO BRACKET -->
-
-        <section class="section">
-
-            <h2>2026 BDO Championship</h2>
-
-            <div class="bracket-container">
-
-                <img
-                    src="bdo.png"
-                    alt="2026 BDO Championship Bracket"
-                >
 
             </div>
 
@@ -244,7 +271,7 @@
                 <div class="trophy">🏆</div>
 
                 <div class="history-year">
-                    2025 BDO CHAMPIONS
+                    2025 BDO Champions
                 </div>
 
                 <div class="history-name">
