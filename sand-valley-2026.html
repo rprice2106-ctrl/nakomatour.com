@@ -87,6 +87,151 @@
             padding-bottom: 14px;
         }
 
+        .section h3 {
+            font-family: 'Fraunces', Georgia, serif;
+            font-size: 19px;
+            font-weight: 600;
+            margin: 26px 0 12px;
+            color: var(--green);
+        }
+
+        .section h3:first-of-type {
+            margin-top: 22px;
+        }
+
+        /* FINAL SCORE */
+
+        .final-score {
+            background: var(--panel);
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .final-score .eyebrow {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--clay);
+            margin-bottom: 10px;
+        }
+
+        .final-score .score {
+            font-family: 'Fraunces', Georgia, serif;
+            font-size: 30px;
+            font-weight: 800;
+        }
+
+        /* CAMEO VIDEO */
+
+        .cameo-box {
+            margin-top: 22px;
+        }
+
+        .cameo-frame {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+            padding-top: 88.9%;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--line);
+            background: var(--panel);
+        }
+
+        .cameo-frame iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .cameo-link {
+            display: block;
+            text-align: center;
+            margin-top: 14px;
+            color: var(--green);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 15px;
+        }
+
+        .cameo-link:hover {
+            color: var(--green-dark);
+        }
+
+        /* ROSTERS */
+
+        .teams-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+            margin-top: 22px;
+        }
+
+        .team-box {
+            background: var(--panel);
+            border-radius: 12px;
+            padding: 22px;
+        }
+
+        .team-box h3 {
+            margin: 0 0 12px;
+        }
+
+        .team-box ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .team-box li {
+            font-size: 15px;
+            padding: 6px 0;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .team-box li:last-child {
+            border-bottom: none;
+        }
+
+        .team-box li.sub {
+            color: var(--muted);
+            font-style: italic;
+        }
+
+        /* MATCH RESULTS */
+
+        .match-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .match-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--line);
+            font-size: 15.5px;
+        }
+
+        .match-list li:last-child {
+            border-bottom: none;
+        }
+
+        .win {
+            font-weight: 700;
+            color: var(--green);
+        }
+
+        .tie {
+            font-style: italic;
+            color: var(--muted);
+        }
+
         .legend {
             display: flex;
             gap: 22px;
@@ -188,6 +333,14 @@
                 padding: 24px;
             }
 
+            .team-box {
+                padding: 14px;
+            }
+
+            .team-box li {
+                font-size: 13px;
+            }
+
             .name {
                 width: 110px;
                 font-size: 11.5px;
@@ -205,14 +358,123 @@
     <main>
 
         <section class="section">
-            <h2>Total Points Leaderboard</h2>
+            <h2>2026 Sand Valley Trip</h2>
 
-            <div class="legend">
-                <span><span class="swatch" style="background:var(--green)"></span>Team Yde</span>
-                <span><span class="swatch" style="background:var(--clay)"></span>Team A. Fil</span>
+            <div class="final-score">
+                <div class="eyebrow">Final Score</div>
+                <div class="score">Team Yde defeats Team Filkouski, 51&ndash;33</div>
             </div>
 
+            <div class="cameo-box">
+                <div class="cameo-frame">
+                    <iframe
+                        src="https://www.cameo.com/recipient/6aa9ad7692ed1a6879d17b48"
+                        allow="autoplay; encrypted-media; fullscreen"
+                        allowfullscreen
+                        loading="lazy">
+                    </iframe>
+                </div>
+                <a class="cameo-link" href="https://www.cameo.com/recipient/6aa9ad7692ed1a6879d17b48" target="_blank" rel="noopener">
+                    🎬 Watch the Cameo on cameo.com
+                </a>
+            </div>
+
+            <h3>Rosters</h3>
+            <div class="teams-grid">
+
+                <div class="team-box">
+                    <h3>Team Yde</h3>
+                    <ul>
+                        <li>Alex Yde</li>
+                        <li>Bobby Price</li>
+                        <li>Alex Wodarczyk</li>
+                        <li>Jeff Bubbers</li>
+                        <li>Tucker Smith</li>
+                        <li>James West</li>
+                        <li>Pete Daniels</li>
+                        <li>John D'Orazio</li>
+                        <li>Austin Resop</li>
+                        <li>Kevin Tancredi</li>
+                        <li>Josh Duggan</li>
+                        <li>Michael Johnson</li>
+                        <li class="sub">Sub: Chazz Huston</li>
+                    </ul>
+                </div>
+
+                <div class="team-box">
+                    <h3>Team Filkouski</h3>
+                    <ul>
+                        <li>Drew Dretske</li>
+                        <li>Alex Filkouski</li>
+                        <li>Tyler Wedel</li>
+                        <li>Kent Davyduke</li>
+                        <li>Ben Filkouski</li>
+                        <li>Landon Vinger</li>
+                        <li>Ty Weimer</li>
+                        <li>Catul Kiti</li>
+                        <li>Mike Doers</li>
+                        <li>Andrew Buss</li>
+                        <li>Nate Gorman</li>
+                        <li>Mickey Defilippo</li>
+                        <li class="sub">Sub: Brian Kopp</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <h3>Total Points Leaderboard</h3>
+            <div class="legend">
+                <span><span class="swatch" style="background:var(--green)"></span>Team Yde</span>
+                <span><span class="swatch" style="background:var(--clay)"></span>Team Filkouski</span>
+            </div>
             <div id="chart"></div>
+
+            <h3>Thursday Sand Valley 4-Ball Results</h3>
+            <ul class="match-list">
+                <li><span class="win">Bobby Price &amp; John D'Orazio</span> defeat Andrew Buss &amp; Mickey Defilippo, 2 up</li>
+                <li><span class="win">Kent Davyduke &amp; Mike Doers</span> defeat Jeff Bubbers &amp; Pete Daniels, 1 up</li>
+                <li><span class="win">Landon Vinger (64) &amp; Ben Filkouski</span> defeat Austin Resop &amp; Michael Johnson, 4 &amp; 3</li>
+                <li><span class="win">Tucker Smith &amp; Kevin Tancredi</span> defeat Tyler Wedel &amp; Catul Kiti, 5 &amp; 3</li>
+                <li><span class="win">Drew Dretske &amp; Alex Filkouski</span> defeat Alex Yde &amp; Josh Duggan, 4 &amp; 3</li>
+                <li><span class="win">James West &amp; Alex Wodarczyk</span> defeat Nate Gorman &amp; Ty Weimer, 2 &amp; 1</li>
+            </ul>
+
+            <h3>Friday Combined Net Results</h3>
+            <ul class="match-list">
+                <li><span class="win">Austin Resop &amp; Jeff Bubbers</span> defeat Landon Vinger &amp; Andrew Buss, 5 &amp; 3</li>
+                <li><span class="win">Drew Dretske &amp; Nate Gorman</span> defeat Michael Johnson &amp; Kevin Tancredi, 5 &amp; 3</li>
+                <li><span class="win">John D'Orazio &amp; Josh Duggan</span> defeat Tyler Wedel &amp; Ben Filkouski, 5 &amp; 4</li>
+                <li><span class="win">Bobby Price &amp; Alex Yde</span> defeat Alex Filkouski &amp; Mike Doers, 1 up</li>
+                <li><span class="win">Alex Wodarczyk &amp; Pete Daniels</span> defeat Ty Weimer &amp; Mickey Defilippo, 7 &amp; 6</li>
+                <li><span class="win">Kent Davyduke &amp; Catul Kiti</span> defeat Tucker Smith &amp; James West, 2 up</li>
+            </ul>
+
+            <h3>Friday Commons Vegas Results</h3>
+            <ul class="match-list">
+                <li><span class="win">Josh Duggan &amp; Michael Johnson</span> defeat Andrew Buss &amp; Nate Gorman for 2 points</li>
+                <li><span class="win">Tucker Smith &amp; Austin Resop</span> defeat Kent Davyduke &amp; Ben Filkouski for 2 points</li>
+                <li><span class="win">Pete Daniels &amp; James West</span> defeat Drew Dretske &amp; Mike Doers for 2 points</li>
+                <li><span class="win">Tyler Wedel &amp; Alex Filkouski</span> defeat Bobby Price &amp; Kevin Tancredi for 2 points</li>
+                <li><span class="win">Alex Wodarczyk &amp; John D'Orazio</span> defeat Ty Weimer &amp; Landon Vinger for 2 points</li>
+                <li><span class="win">Alex Yde &amp; Jeff Bubbers</span> defeat Catul Kiti &amp; Mickey Defilippo for 2 points</li>
+            </ul>
+
+            <h3>Saturday Singles Match Play Results</h3>
+            <ul class="match-list">
+                <li><span class="win">Kevin Tancredi</span> defeats Mike Doers, 2 &amp; 1</li>
+                <li><span class="win">Bobby Price</span> defeats Andrew Buss, 2 up</li>
+                <li><span class="win">Drew Dretske</span> defeats Chazz Huston, 1 up</li>
+                <li><span class="win">Alex Yde</span> defeats Alex Filkouski</li>
+                <li><span class="win">Jeff Bubbers</span> defeats Landon Vinger, 6 &amp; 4</li>
+                <li><span class="tie">James West &amp; Brian Kopp tie</span></li>
+                <li><span class="win">Ty Weimer</span> defeats Michael Johnson</li>
+                <li><span class="win">Pete Daniels</span> defeats Catul Kiti, 2 &amp; 1</li>
+                <li><span class="tie">Tucker Smith &amp; Ben Filkouski tie</span></li>
+                <li><span class="win">Austin Resop</span> defeats Kent Davyduke, 2 &amp; 1</li>
+                <li><span class="win">Alex Wodarczyk</span> defeats Nate Gorman, 4 &amp; 3</li>
+                <li><span class="win">Tyler Wedel</span> defeats John D'Orazio, 4 &amp; 3</li>
+            </ul>
+
         </section>
 
         <!-- BACK -->
