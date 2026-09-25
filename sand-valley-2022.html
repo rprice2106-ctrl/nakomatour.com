@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Sand Valley 2022 | Nakoma Tour</title>
+    <title>Sand Valley 2022 Results | Nakoma Tour</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;800&family=Karla:wght@400;600;700&display=swap" rel="stylesheet">
@@ -12,6 +12,7 @@
         :root {
             --paper: #f6f1e6;
             --card: #fffaf1;
+            --panel: #efe7d4;
             --ink: #24291f;
             --muted: #6f6a5c;
             --green: #33513a;
@@ -23,64 +24,164 @@
             padding-bottom: env(safe-area-inset-bottom, 0px);
         }
 
-        * {
-            box-sizing: inherit;
-        }
+        * { box-sizing: inherit; }
 
         body {
             margin: 0;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
             font-family: 'Karla', Arial, Helvetica, sans-serif;
             background: var(--paper);
             color: var(--ink);
+            line-height: 1.6;
         }
 
         header {
             background: linear-gradient(135deg, var(--green), var(--green-dark));
             color: #fffaf1;
             text-align: center;
-            padding: 60px 20px;
+            padding: 90px 20px;
         }
 
         header h1 {
             margin: 0;
             font-family: 'Fraunces', Georgia, serif;
-            font-size: 40px;
-            letter-spacing: 2px;
+            font-size: 54px;
+            letter-spacing: 3px;
             font-weight: 800;
         }
 
         main {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 40px 20px;
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 0 20px;
         }
 
-        .gif-frame {
+        .section {
             background: var(--card);
             border: 1px solid var(--line);
             border-radius: 16px;
-            padding: 16px;
-            box-shadow: 0 6px 20px rgba(40,30,10,0.08);
-            max-width: 700px;
-            width: 100%;
+            padding: 35px;
+            margin-bottom: 26px;
+            box-shadow: 0 6px 20px rgba(40,30,10,0.06);
+        }
+
+        .section h2 {
+            margin-top: 0;
+            font-family: 'Fraunces', Georgia, serif;
+            font-size: 26px;
+            font-weight: 600;
+            border-bottom: 2px solid var(--line);
+            padding-bottom: 14px;
+        }
+
+        .section h3 {
+            font-family: 'Fraunces', Georgia, serif;
+            font-size: 19px;
+            font-weight: 600;
+            margin: 26px 0 12px;
+            color: var(--green);
+        }
+
+        .section h3:first-of-type {
+            margin-top: 22px;
+        }
+
+        /* GIF HIGHLIGHT */
+
+        .gif-frame {
+            margin-top: 4px;
+            text-align: center;
         }
 
         .gif-frame img {
             width: 100%;
+            max-width: 500px;
             height: auto;
             display: block;
-            border-radius: 10px;
+            margin: 0 auto;
+            border-radius: 12px;
+            border: 1px solid var(--line);
         }
 
+        /* ROSTERS */
+
+        .teams-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+            margin-top: 22px;
+        }
+
+        .team-box {
+            background: var(--panel);
+            border-radius: 12px;
+            padding: 22px;
+        }
+
+        .team-box h3 {
+            margin: 0 0 12px;
+        }
+
+        .team-box ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .team-box li {
+            font-size: 15px;
+            padding: 6px 0;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .team-box li:last-child {
+            border-bottom: none;
+        }
+
+        .team-box li.sub {
+            color: var(--muted);
+            font-style: italic;
+        }
+
+        /* MATCH RESULTS */
+
+        .match-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .match-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--line);
+            font-size: 15.5px;
+        }
+
+        .match-list li:last-child {
+            border-bottom: none;
+        }
+
+        .win {
+            font-weight: 700;
+            color: var(--green);
+        }
+
+        .tie {
+            font-style: italic;
+            color: var(--muted);
+        }
+
+        .note {
+            margin: 14px 0 0;
+            color: var(--muted);
+            font-size: 13.5px;
+            font-style: italic;
+        }
+
+        /* BACK LINK */
+
         .back {
-            display: block;
-            text-align: center;
-            margin: 30px 0 0;
+            display: inline-block;
+            margin-top: 5px;
             color: var(--green);
             text-decoration: none;
             font-weight: 700;
@@ -92,19 +193,32 @@
 
         footer {
             text-align: center;
-            padding: 30px 20px;
+            padding: 40px 20px;
             color: var(--muted);
             font-size: 14px;
             border-top: 1px solid var(--line);
         }
 
-        @media (max-width: 600px) {
+        @media (max-width: 700px) {
             header {
-                padding: 45px 20px;
+                padding: 70px 20px;
             }
 
             header h1 {
-                font-size: 30px;
+                font-size: 38px;
+                letter-spacing: 2px;
+            }
+
+            .section {
+                padding: 24px;
+            }
+
+            .team-box {
+                padding: 14px;
+            }
+
+            .team-box li {
+                font-size: 13px;
             }
         }
     </style>
@@ -117,14 +231,76 @@
     </header>
 
     <main>
-        <div>
+
+        <section class="section">
+            <h2>2022 Sand Valley Trip</h2>
+
             <div class="gif-frame">
                 <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExb3NoY3BtZmoxdHJyMW0zY3Z3bTNjd2dwbm0yZ3FlM3hkMm5oODZjaCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/B6i4lPxX9RI7GcenNt/giphy.gif" alt="Sand Valley 2022">
             </div>
-            <a class="back" href="tour-history.html">
-                ← Back to Tour History
-            </a>
-        </div>
+
+            <h3>Rosters</h3>
+            <div class="teams-grid">
+
+                <div class="team-box">
+                    <h3>Team 1</h3>
+                    <ul>
+                        <li>Andrew Klein</li>
+                        <li>Ty Weimer</li>
+                        <li>Bobby Price</li>
+                        <li>James West</li>
+                        <li>Andrew Buss</li>
+                        <li>Kevin Tancredi</li>
+                        <li>Kent Davyduke</li>
+                        <li>Mike Doers</li>
+                    </ul>
+                </div>
+
+                <div class="team-box">
+                    <h3>Team 2</h3>
+                    <ul>
+                        <li>Landon Vinger</li>
+                        <li>Catul Kiti</li>
+                        <li>Ethan Miller</li>
+                        <li>Alex Yde</li>
+                        <li>Keith Batenhorst</li>
+                        <li>Michael Johnson</li>
+                        <li>Tyler Wedel</li>
+                        <li>Tucker Smith</li>
+                        <li class="sub">Sub: John D'Orazio</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <h3>Sand Valley Match Play Results</h3>
+            <ul class="match-list">
+                <li><span class="win">Andrew Klein &amp; Ty Weimer</span> defeat Landon Vinger &amp; Catul Kiti, 2 points to 1 point</li>
+                <li><span class="win">Ethan Miller &amp; Alex Yde</span> defeat Bobby Price &amp; James West, 2.5 points to 0.5 point</li>
+                <li><span class="win">Keith Batenhorst &amp; Michael Johnson</span> defeat Andrew Buss &amp; Kevin Tancredi, 2 points to 1 point</li>
+                <li><span class="tie">Kent Davyduke &amp; Mike Doers tie Tyler Wedel &amp; Tucker Smith, 1.5 points to 1.5 points</span></li>
+            </ul>
+
+            <h3>Mammoth Singles Matches</h3>
+            <ul class="match-list">
+                <li>Ty Weimer vs Tucker Smith</li>
+                <li>James West vs John D'Orazio</li>
+                <li>Andrew Klein vs Catul Kiti</li>
+                <li>Andrew Buss vs Keith Batenhorst</li>
+                <li>Mike Doers vs Michael Johnson</li>
+                <li>Kevin Tancredi vs Ethan Miller</li>
+                <li>Kent Davyduke vs Landon Vinger</li>
+                <li>Bobby Price vs Alex Yde</li>
+            </ul>
+            <p class="note">Results not yet recorded for the singles matches.</p>
+
+        </section>
+
+        <!-- BACK -->
+        <a class="back" href="tour-history.html">
+            ← Back to Tour History
+        </a>
+
     </main>
 
     <footer>
